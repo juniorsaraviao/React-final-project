@@ -1,0 +1,21 @@
+.input-n{
+    width: 255px;
+    height: 25px;
+}
+.country{
+    padding: 0.5rem;
+}
+
+.btn-s{
+    color: #282c34;
+    background: transparent;
+    border: 2px solid #d01717;
+    border-radius: 6px;
+    width: 60px;
+    height: 35px;
+}
+
+.btn-s:hover{
+    color: #fff;
+    background: #d01717;
+}

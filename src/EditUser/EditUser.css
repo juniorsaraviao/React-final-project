@@ -1,0 +1,35 @@
+.input-nn{
+    width: 255px;
+    height: 25px;
+}
+.list{
+    margin: 10px;
+}
+.btn-u{
+    color: #ffffff;
+    background: #32b72b;
+    border: 2px solid #54a728;
+    border-radius: 6px;
+    width: 60px;
+    height: 35px;
+}
+.btn-u:hover{
+    background: #78d873;
+    color: black;
+}
+
+.content{
+    background: steelblue;
+    /* margin-left: 50%; */
+    /* margin-right: 50%; */
+    border-radius: 13%;
+    width: 28rem;
+    margin: auto;
+    /* height: 183px; */
+    /* border-color: white; */
+    border: 2px solid #0a0a09;
+    height: 100%;
+}
+.form{
+    margin-top: 35px;
+}
