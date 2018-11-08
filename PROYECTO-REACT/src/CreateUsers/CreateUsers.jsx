@@ -15,7 +15,7 @@ class CreateUsers extends Component {
                 <h1>USERS</h1>
                 {this.props.posts.map((post) => (
                     <div key={post.id} className="content-t">
-                        {post.editing ? <EditUser options={[ 'Perú', 'Colombia','Ecuador','Argentina','Chile','Venezuela','Brasil','Bolivia' ]}  post={post} key={post.id} /> : <Post post={post}
+                        {post.editing ? <EditUser options={[ 'Perú', 'Colombia','Ecuador','Argentina','Chile','Venezuela','Brasil','Bolivia' ]} genders={['Male', 'Female']}  post={post} key={post.id} /> : <Post post={post}
                         key={post.id} />}
                     </div>
                 ))}

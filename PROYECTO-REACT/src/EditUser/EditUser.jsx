@@ -9,18 +9,21 @@ class EditUser extends Component {
         const newName = this.getName.value;
         const newLastname = this.getLastname.value;
         const newCountry = this.getCountry.value;
+        const newGender =this.getGender.value;
         const data = {
           newName,
           newLastname,
-          newCountry
+          newCountry,
+          newGender
         }
         this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
     }
     render() {
-        const { options } = this.props
+        const { options,genders } = this.props
         return (
             <div key={this.props.post.id} className="content">
                 <form className="form" onSubmit={this.handleEdit}>
+                    <h2>CHANGES</h2>
                     <input className="input-nn" required type="text" ref={(input) => this.getName = input}
                     defaultValue={this.props.post.name} placeholder="Enter New First Name" /><br /><br />
                     <input className="input-nn" required type="text" ref={(input) => this.getLastname = input}
@@ -29,6 +32,13 @@ class EditUser extends Component {
                         {options.map(option =>
                         <option value={option} key={option}>
                         {option}
+                        </option>)
+                        }
+                    </select>
+                    <select className="list" ref={(input)=>this.getGender=input} defaultValue={this.props.post.gender}>
+                        {genders.map(gender =>
+                        <option value={gender} key={gender}>
+                        {gender}
                         </option>)
                         }
                     </select>
@@ -41,6 +51,9 @@ class EditUser extends Component {
 
 EditUser.propTypes = {
     options: PropTypes.arrayOf(
+        PropTypes.string.isRequired
+      ).isRequired,
+    genders: PropTypes.arrayOf(
         PropTypes.string.isRequired
       ).isRequired
 };

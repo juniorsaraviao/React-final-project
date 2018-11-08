@@ -14,6 +14,7 @@ const postReducer = (state =[], action)=>{
             name: action.data.newName,
             lastname: action.data.newLastname,
             country: action.data.newCountry,
+            gender: action.data.newGender,
             editing: !post.editing
             }
             } else return post;
